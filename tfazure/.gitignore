@@ -1,0 +1,8 @@
+# Arquivos de estado do Terraform
+*.tfstate
+*.tfstate.*
+terraform.tfstate.backup
+# Arquivos de plano de execução do Terraform
+*.tfplan
+# Diretório .terraform
+.terraform/
