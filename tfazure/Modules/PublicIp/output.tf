@@ -1,7 +1,3 @@
-output "public_ip_name" {
-  value = azurerm_public_ip.public-ip.name
-}
-
 output "public_ip_id" {
-  value = azurerm_public_ip.public-ip.id
+  value = { for vm_name, public_ip in azurerm_public_ip.public-ip : vm_name => public_ip.id }
 }

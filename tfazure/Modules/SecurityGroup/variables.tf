@@ -12,3 +12,8 @@ variable "resource_group_location" {
   description = "Create location"
   type        = string
 }
+
+variable "subnetid" {
+  description = "Create subnet"
+  type        = list(string)
+}

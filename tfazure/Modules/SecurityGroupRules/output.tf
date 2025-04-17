@@ -24,8 +24,8 @@ locals {
 }
 
 output "ssh_rule_info" {
-  value = element([ for p, v in local.security_group_rules_by_name : v.name ], 0)
-  
+  value = element([for p, v in local.security_group_rules_by_name : v.name], 0)
+
 }
 
 output "ftp_rule_info" {
