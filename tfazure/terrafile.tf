@@ -44,7 +44,7 @@ module "ModuleSecurityGroup" {
   resource_group_location = module.ModuleResourceGroup.resource_group_location
   subnetid                = module.ModuleSubNet.sub_id
 
-  depends_on = [ module.ModuleSubNet ]
+  depends_on = [module.ModuleSubNet]
 
 }
 

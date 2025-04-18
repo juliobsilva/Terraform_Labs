@@ -18,8 +18,8 @@ variable "ip-pub" {
   type        = map(string)
 }
 
- variable "vms_info" {
-   description = "Vms list"
-   type        = list(string)
+variable "vms_info" {
+  description = "Vms list"
+  type        = list(string)
 }
 
