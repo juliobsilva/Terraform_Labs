@@ -4,12 +4,12 @@ resource "azurerm_virtual_machine" "vms" {
   location              = var.resource_group_location
   resource_group_name   = var.resource_group_name
   network_interface_ids = [var.interface_ids[each.key]]
-  vm_size               = "Standard_F2"
+  vm_size               = "Standard_B2s"
 
   storage_image_reference {
     publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "ubuntu-pro"
     version   = "latest"
   }
 
@@ -22,8 +22,8 @@ resource "azurerm_virtual_machine" "vms" {
 
   os_profile {
     computer_name  = each.value
-    admin_username = "juliobsilva"
-    admin_password = "Jlo.123456789"
+    admin_username = "jcroot"
+    admin_password = "jcroot.123456789"
   }
 
   os_profile_linux_config {

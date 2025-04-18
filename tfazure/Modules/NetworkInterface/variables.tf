@@ -7,9 +7,10 @@ variable "resource_group_location" {
   description = "Create resource group location"
 }
 
+
 variable "subnetid" {
   description = "Create subnet"
-  type        = list(string)
+  type        = map(string)
 }
 
 variable "ip-pub" {
@@ -17,8 +18,8 @@ variable "ip-pub" {
   type        = map(string)
 }
 
-variable "vms_info" {
-  description = "Vms list"
-  type        = list(string)
+ variable "vms_info" {
+   description = "Vms list"
+   type        = list(string)
 }
 

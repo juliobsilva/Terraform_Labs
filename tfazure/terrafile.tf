@@ -64,30 +64,3 @@ module "ModuleVirtualMachine" {
   interface_ids           = module.ModuleNetworkInterface.output_network_interface
 }
 
-
-
-
-/*
-
-module "ModuleVirtualNetworkGateway" {
-  source = "./Modules/VirtualNetWorkGateway"
-  resource_group_name = module.ModuleResourceGroup.resource_group_name
-  resource_group_location = module.ModuleResourceGroup.resource_group_location
-  vng_info = var.vng_info
-  ip_configuration_info = var.ip_configuration_info
-  public_ip_id = module.ModulePublicIp.public_ip_id
-  subnet_id = module.ModuleSubNet.sub_id[0]
-}
-
-
-
-module "ModuleNetworInterface" {
-  source = "./Modules/NetworkInterface"
-  resource_group_name = module.ModuleResourceGroup.resource_group_name
-  resource_group_location = module.ModuleResourceGroup.resource_group_location
-  vnet_name = module.ModuleVirtualNetwork.virtual_network_name
-  subnetid = module.ModuleSubNet.sub_id
-  subnet_name = module.ModuleSubNet.sub_name
-  ip-pub = module.ModulePublicIp.public_ip_id
-}
-*/

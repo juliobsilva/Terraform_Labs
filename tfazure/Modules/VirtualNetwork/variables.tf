@@ -25,19 +25,3 @@ variable "environment" {
 
 
 
-
-/*
-
-locals {
-  get_name_vnet = element([ for p, v in var.virtual_network_info : v.virtual_network_name ], 0)
-}
-
-
-#variable "security_group_id" {
-#  description = "Create security_group"
-#  type = string
-#}
-*/
-
-
-

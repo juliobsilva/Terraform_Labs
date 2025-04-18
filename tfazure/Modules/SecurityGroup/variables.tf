@@ -15,6 +15,5 @@ variable "resource_group_location" {
 
 variable "subnetid" {
   description = "Create subnet"
-  type        = list(string)
-  default     = []
+  type        = map(string)
 }

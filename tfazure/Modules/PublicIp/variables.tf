@@ -1,8 +1,3 @@
-#variable "virtual_machine_names" {
-#  description = "Create public ip"
-#  type = string
-#}
-
 variable "resource_group_name" {
   description = "Create resource groups"
   type        = string

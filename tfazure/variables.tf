@@ -52,7 +52,8 @@ variable "resource_group_info" {
   default = []
 }
 
-variable "vms_info" {
-  description = "Vms list"
-  type        = list(string)
+ variable "vms_info" {
+   description = "Vms list"
+   type        = list(string)
 }
+
