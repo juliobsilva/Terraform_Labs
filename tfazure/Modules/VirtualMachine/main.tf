@@ -24,8 +24,8 @@ resource "azurerm_virtual_machine" "vms" {
 
   os_profile {
     computer_name  = each.value
-    admin_username = "jcroot"
-    admin_password = "jcroot.123456789"
+    admin_username = "project"
+    admin_password = "project.123456789"
   }
 
   os_profile_linux_config {
