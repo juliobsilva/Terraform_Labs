@@ -9,7 +9,7 @@ output "resource_group_location" {
 
 
 output "sucurity_group_name" {
-  value = module.ModuleSecurityGroupRules.sucurity_group_name
+  value = module.ModuleSecurityGroup.security_group_name
 }
 
 
@@ -37,4 +37,12 @@ output "public_ip_id" {
 
 output "output_network_interface" {
   value = module.ModuleNetworkInterface.output_network_interface
+}
+
+output "managed_disk" {
+  value = module.ModuleManageDisk.managed_disk
+}
+
+output "virtual_machine_ids" {
+  value = module.ModuleVirtualMachine.virtual_machine_ids
 }

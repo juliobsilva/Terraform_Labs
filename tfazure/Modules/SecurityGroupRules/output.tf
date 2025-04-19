@@ -1,9 +1,3 @@
-output "sucurity_group_name" {
-  value = { for k, v in var.listrules : k => v.name }
-}
-
-
-
 output "formatted_rules" {
   value = [for rule in var.listrules : {
     name                       = rule.name
@@ -24,10 +18,6 @@ locals {
 }
 
 output "ssh_rule_info" {
-  value = element([for p, v in local.security_group_rules_by_name : v.name], 0)
+  value = { for p, v in local.security_group_rules_by_name : p => v.destination_port_range }
 
-}
-
-output "ftp_rule_info" {
-  value = local.security_group_rules_by_name
 }

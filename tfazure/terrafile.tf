@@ -64,3 +64,12 @@ module "ModuleVirtualMachine" {
   interface_ids           = module.ModuleNetworkInterface.output_network_interface
 }
 
+
+module "ModuleManageDisk" {
+  source                  = "./Modules/ManagedDisk"
+  list_manage_disk        = var.list_manage_disk
+  resource_group_name     = module.ModuleResourceGroup.resource_group_name
+  resource_group_location = module.ModuleResourceGroup.resource_group_location
+  vm_id                   = module.ModuleVirtualMachine.virtual_machine_ids["VM01"]
+}
+

@@ -57,3 +57,17 @@ variable "vms_info" {
   type        = list(string)
 }
 
+variable "list_manage_disk" {
+  description = "Manage disk"
+  type = list(object({
+    name                 = string
+    storage_account_type = string
+    create_option        = string
+    disk_size_gb         = number
+  }))
+  default = []
+}
+
+
+
+

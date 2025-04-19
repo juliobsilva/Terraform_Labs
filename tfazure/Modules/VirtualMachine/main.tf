@@ -6,6 +6,8 @@ resource "azurerm_virtual_machine" "vms" {
   network_interface_ids = [var.interface_ids[each.key]]
   vm_size               = "Standard_B2s"
 
+  delete_os_disk_on_termination = true
+
   storage_image_reference {
     publisher = "Canonical"
     offer     = "ubuntu-24_04-lts"
